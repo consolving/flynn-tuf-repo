@@ -1,1 +1,5 @@
 ._*
+
+# NEVER store private keys in the repository
+keys/
+staged/
