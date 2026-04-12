@@ -1,0 +1,24 @@
+{
+  "signed": {
+    "_type": "snapshot",
+    "expires": "2027-04-11T22:29:11Z",
+    "meta": {
+      "root.json": {
+        "hashes": {
+          "sha256": "8b9a860a4eed8578e5892e38e4536859a1b059c7f1e9e69d79d2c3b4baf5e02b",
+          "sha512": "5eb1bd12d2c8cba9713e58ea73fded64cb5d3e8ce2fd83c201e3d25b9c18f146c1df782df21aaee30721de456496912c9142ca7f35a7ff5e156125c35bdd7ae9"
+        },
+        "version": 1
+      },
+      "targets.json": {
+        "hashes": {
+          "sha256": "7a169c90c43d26af1887394120c8ed404295b2f7fe7c94fefadb997f644e9d5c",
+          "sha512": "e6eaced369a0e22c8ac44ac6567ed9393741042928dc1d02b65030641e484f633be513a550fa18cb0f030a8e76b7b96567d9d94fa76d49060822705082e96aa3"
+        },
+        "version": 1
+      }
+    },
+    "version": 1
+  },
+  "signatures": []
+}

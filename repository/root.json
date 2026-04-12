@@ -1,0 +1,67 @@
+{
+  "signed": {
+    "_type": "Root",
+    "consistent_snapshot": true,
+    "expires": "2027-04-11T22:29:11Z",
+    "keys": {
+      "2267642a4032acd795534ac2783e2f841f7fdc04306fe6af0a6e192adb17d541": {
+        "keytype": "ed25519",
+        "keyval": {
+          "public": "8f6ac68cbbe1108154b81793bc39e603bfbccfb7c4d92a159b7e94108f4cf7da"
+        }
+      },
+      "2e4c10fed3a16ba4f66eb121945c6b713ef9f5335e18867aae68f696cf8baf5a": {
+        "keytype": "ed25519",
+        "keyval": {
+          "public": "3c659ab84ccd2b48802b41a45ad1799b06b0f87998583111ed61ee63ac694df8"
+        }
+      },
+      "88d235a8533882e18610b99a25480c18b85cd71fc662ff62f17f9e597f585b54": {
+        "keytype": "ed25519",
+        "keyval": {
+          "public": "e81c1b222040f6580749060c6b52f8f3859b3a1acb0551bbc70aabecf8ea8922"
+        }
+      },
+      "f3ecdb3d9b6f760f61e6adac3e1b93d7ef0508d2a832eda984b01346a091a5b5": {
+        "keytype": "ed25519",
+        "keyval": {
+          "public": "a7e5ff94fbe4167c272bb0a105cd56bb0bc5da6d6b90b8a36fdbc8714a64cd79"
+        }
+      }
+    },
+    "roles": {
+      "root": {
+        "keyids": [
+          "88d235a8533882e18610b99a25480c18b85cd71fc662ff62f17f9e597f585b54"
+        ],
+        "threshold": 1
+      },
+      "snapshot": {
+        "keyids": [
+          "2e4c10fed3a16ba4f66eb121945c6b713ef9f5335e18867aae68f696cf8baf5a"
+        ],
+        "threshold": 1
+      },
+      "targets": {
+        "keyids": [
+          "f3ecdb3d9b6f760f61e6adac3e1b93d7ef0508d2a832eda984b01346a091a5b5"
+        ],
+        "threshold": 1
+      },
+      "timestamp": {
+        "keyids": [
+          "2267642a4032acd795534ac2783e2f841f7fdc04306fe6af0a6e192adb17d541"
+        ],
+        "threshold": 1
+      }
+    },
+    "version": 4
+  },
+  "signatures": [
+    {
+      "keyid": "88d235a8533882e18610b99a25480c18b85cd71fc662ff62f17f9e597f585b54",
+      "method": "ed25519",
+      "sig": "322e314aca34e419e6f59d89938ce5b07661a47cb0fe616d311dfe83bf8e518b13a1201970010f06555d4e49e234e28527a0ecc85e2cb5edbfd72b93c9e20005"
+    }
+  ]
+}
