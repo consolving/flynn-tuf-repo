@@ -1,6 +1,6 @@
 # Flynn TUF Repository
 
-This repository hosts the TUF (The Update Framework) metadata and components for Flynn.
+Maintained by [phaus](https://github.com/phaus).
 
 This project is dedicated to restoring the Flynn ecosystem. We would like to acknowledge the awesome work that was done by the [flynn.io team](https://github.com/flynn) in building the original platform.
 
