@@ -1,1 +1,36 @@
-{"signed":{"_type":"timestamp","expires":"2026-04-17T20:14:25Z","meta":{"root.json":{"hashes":{"sha256":"8b9a860a4eed8578e5892e38e4536859a1b059c7f1e9e69d79d2c3b4baf5e02b","sha512":"5eb1bd12d2c8cba9713e58ea73fded64cb5d3e8ce2fd83c201e3d25b9c18f146c1df782df21aaee30721de456496912c9142ca7f35a7ff5e156125c35bdd7ae9"},"length":0},"snapshot.json":{"hashes":{"sha512":"f4086f54175cbfe576c1a5fc756203e33c4e82eb9038e89b0fe8b3f01d8101cec7ab5d1ed694d2f488894b736c073cd481c2ec4eed9e3fa26a2fbe2fe49728c4"},"length":697},"targets.json":{"hashes":{"sha256":"7a169c90c43d26af1887394120c8ed404295b2f7fe7c94fefadb997f644e9d5c","sha512":"e6eaced369a0e22c8ac44ac6567ed9393741042928dc1d02b65030641e484f633be513a550fa18cb0f030a8e76b7b96567d9d94fa76d49060822705082e96aa3"},"length":0}},"version":33},"signatures":[{"keyid":"1861f61ae4cc78235a15a32a0e66dcf3623721c142e51c273b49fba13f485063","method":"ed25519","sig":"032d2de07e1ecc3eb20dc9988ae829342765d9f281c42a51bf105700b57cce0d08211a30f99b0ff99d79f8d7064843dec6d66c4b136cf1ffe782d306fdeb720b"}]}
+{
+	"signed": {
+		"_type": "timestamp",
+		"expires": "2026-07-16T22:48:22Z",
+		"meta": {
+			"root.json": {
+				"hashes": {
+					"sha256": "8b9a860a4eed8578e5892e38e4536859a1b059c7f1e9e69d79d2c3b4baf5e02b",
+					"sha512": "5eb1bd12d2c8cba9713e58ea73fded64cb5d3e8ce2fd83c201e3d25b9c18f146c1df782df21aaee30721de456496912c9142ca7f35a7ff5e156125c35bdd7ae9"
+				},
+				"length": 0
+			},
+			"snapshot.json": {
+				"hashes": {
+					"sha512": "6cb0e080b49a147a564def37a90b9a6b3b8b97b35203f99b015a4f751b35a6bcf4816332001879e3205b176b6a42060299644dbc7b6ba724ba0467167fb646fa"
+				},
+				"length": 697
+			},
+			"targets.json": {
+				"hashes": {
+					"sha256": "7a169c90c43d26af1887394120c8ed404295b2f7fe7c94fefadb997f644e9d5c",
+					"sha512": "e6eaced369a0e22c8ac44ac6567ed9393741042928dc1d02b65030641e484f633be513a550fa18cb0f030a8e76b7b96567d9d94fa76d49060822705082e96aa3"
+				},
+				"length": 0
+			}
+		},
+		"version": 34
+	},
+	"signatures": [
+		{
+			"keyid": "1861f61ae4cc78235a15a32a0e66dcf3623721c142e51c273b49fba13f485063",
+			"method": "ed25519",
+			"sig": "addf082dbadde880b95c8dd0eded0a5d11e52ad8fb7063ad6d77d349485724b641dd3b5b1185e2731f8cd5774576579b33263a60cd4b611f1e119f2186910d0f"
+		}
+	]
+}
