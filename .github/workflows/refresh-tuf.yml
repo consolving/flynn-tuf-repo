@@ -1,0 +1,58 @@
+name: Refresh TUF Metadata
+
+on:
+  schedule:
+    # Run on the 1st of every month at 00:00 UTC
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+    inputs:
+      expiry_days:
+        description: 'Days until metadata expiry'
+        required: false
+        default: '90'
+      dry_run:
+        description: 'Dry run (no changes written)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install PyNaCl
+        run: pip install pynacl
+
+      - name: Refresh TUF timestamp and snapshot
+        env:
+          TUF_SNAPSHOT_SEED_HEX: ${{ secrets.TUF_SNAPSHOT_SEED_HEX }}
+          TUF_TIMESTAMP_SEED_HEX: ${{ secrets.TUF_TIMESTAMP_SEED_HEX }}
+        run: |
+          EXPIRY_DAYS="${{ github.event.inputs.expiry_days || '90' }}"
+          DRY_RUN_FLAG=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            DRY_RUN_FLAG="--dry-run"
+          fi
+          python3 script/refresh-timestamp.py \
+            --repo-dir . \
+            --expiry-days "$EXPIRY_DAYS" \
+            $DRY_RUN_FLAG
+
+      - name: Commit and push updated metadata
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add repository/snapshot.json repository/timestamp.json 'repository/*.snapshot.json'
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "tuf: refresh timestamp and snapshot metadata ($(date -u +%Y-%m-%d))"
+            git push
+          fi
