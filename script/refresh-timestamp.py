@@ -153,12 +153,26 @@ def main():
     new_expiry = datetime.now(timezone.utc) + timedelta(days=args.expiry_days)
     new_expiry_str = new_expiry.strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    # Ensure root.json is included in snapshot meta (required by go-tuf client
+    # for consistent snapshot mode — without it, the client can't construct the
+    # hashed path to download root.json)
+    snapshot_meta = dict(current_snapshot["signed"]["meta"])
+    if "root.json" not in snapshot_meta:
+        root_path = os.path.join(repository_dir, "root.json")
+        with open(root_path, "rb") as f:
+            root_bytes = f.read()
+        snapshot_meta["root.json"] = {
+            "hashes": {"sha512": hashlib.sha512(root_bytes).hexdigest()},
+            "length": len(root_bytes),
+        }
+        print("Added root.json to snapshot meta (was missing)")
+
     # Re-sign snapshot (increment version, update expiry, keep meta references)
     new_snapshot_version = snapshot_version + 1
     new_snapshot_signed = {
         "_type": "snapshot",
         "expires": new_expiry_str,
-        "meta": current_snapshot["signed"]["meta"],
+        "meta": snapshot_meta,
         "version": new_snapshot_version,
     }
     new_snapshot = sign_metadata(new_snapshot_signed, snapshot_key_id, snapshot_signing_key)

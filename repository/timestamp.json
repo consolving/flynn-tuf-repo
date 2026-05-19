@@ -1,22 +1,22 @@
 {
 	"signed": {
 		"_type": "timestamp",
-		"expires": "2026-08-16T20:10:04Z",
+		"expires": "2026-08-17T09:35:45Z",
 		"meta": {
 			"snapshot.json": {
 				"hashes": {
-					"sha512": "dda9b462f01ccf1d9503b691431f5e25bd7088be6be33374592d55242545c181554864908e4ef5d05f685b50fd3be942497fff953899cf0feb033918d6bb9f8a"
+					"sha512": "c6b3cf111b5f87410c278f4369bb32813cb2bd22ef8bc8366ed29314fa31f66f8a49027b4ce80c88397c775ccd79ad5024cd081cd5c9bd2d768959433e24a4d9"
 				},
-				"length": 603
+				"length": 815
 			}
 		},
-		"version": 45
+		"version": 46
 	},
 	"signatures": [
 		{
 			"keyid": "1861f61ae4cc78235a15a32a0e66dcf3623721c142e51c273b49fba13f485063",
 			"method": "ed25519",
-			"sig": "c94a885ef9198837571de0760d2d92c63d9072268860eb8c9cbfb902b4e6e22608dce08a91fdb3e2ba6a24ace5cf53cf3e8600b56c2c4a6fdee68c8cb5999f05"
+			"sig": "47f8cb58050222421cf526e6a89e8d9dcec73152cee366a6490d95a44805cf0658dc4c4b6d683a3469016319dcb4da5030146f70a94287e1eb1d60a2638d9709"
 		}
 	]
 }
