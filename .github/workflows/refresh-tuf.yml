@@ -56,3 +56,23 @@ jobs:
             git commit -m "tuf: refresh timestamp and snapshot metadata ($(date -u +%Y-%m-%d))"
             git push
           fi
+
+      - name: Trigger IPFS mirror re-sync
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          WEBHOOK_SECRET: ${{ secrets.TUF_WEBHOOK_SECRET }}
+        run: |
+          if [ -z "$WEBHOOK_SECRET" ]; then
+            echo "Warning: TUF_WEBHOOK_SECRET not set, skipping IPFS sync"
+            exit 0
+          fi
+          echo "Triggering IPFS mirror re-sync..."
+          HTTP_CODE=$(curl -s -o /tmp/webhook-response.txt -w "%{http_code}" \
+            -X POST "https://host1.consolving.net/webhook/tuf-sync" \
+            -H "X-Webhook-Secret: ${WEBHOOK_SECRET}" \
+            --max-time 30)
+          echo "Response: HTTP $HTTP_CODE"
+          cat /tmp/webhook-response.txt
+          if [ "$HTTP_CODE" != "202" ]; then
+            echo "Warning: webhook returned unexpected status $HTTP_CODE"
+          fi
