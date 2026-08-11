@@ -1,1 +1,22 @@
-{"signed":{"_type":"timestamp","expires":"2026-08-12T11:21:51Z","meta":{"snapshot.json":{"hashes":{"sha512":"a0eb5aa2e707babe4a511d3debba591e236b23c9dfd043b2d5f99391efc48f5145459bbe23a158694c418981852b7a9fd2dfab6ac4dd21e48d3eab631e91e0dd"},"length":697}},"version":54},"signatures":[{"keyid":"1861f61ae4cc78235a15a32a0e66dcf3623721c142e51c273b49fba13f485063","method":"ed25519","sig":"c1d081fece894186e67f2a78245594617f95231238bc9c39ab8208cc1c3fd549138ca04f65eeeb9c118d3fe165f9dce496d805be64ef8b8202acad0a0e57c204"}]}
+{
+	"signed": {
+		"_type": "timestamp",
+		"expires": "2026-11-09T21:10:02Z",
+		"meta": {
+			"snapshot.json": {
+				"hashes": {
+					"sha512": "db34c0e8e60969d5374206fd04f4af37e4f93342b69c237291e076397ea8c4c661dcd0337aa08a9cfbec6f93619c519b5273fd3257899586035cb9fc0dae9a22"
+				},
+				"length": 815
+			}
+		},
+		"version": 55
+	},
+	"signatures": [
+		{
+			"keyid": "1861f61ae4cc78235a15a32a0e66dcf3623721c142e51c273b49fba13f485063",
+			"method": "ed25519",
+			"sig": "31caf4bb2c83cd3af6ddcb27a7bfcb4f31a579c00043595fffbf5f4804fd353b69d6c47d88af5b86f38cbfe9cd2d1c6a94c95d97779606f23b3ab21f71e60200"
+		}
+	]
+}
