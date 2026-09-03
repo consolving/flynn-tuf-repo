@@ -67,9 +67,17 @@ jobs:
             exit 0
           fi
           echo "Triggering IPFS mirror re-sync..."
+          # Body is authenticated with an HMAC-SHA256 signature over the raw
+          # payload (X-Webhook-Signature) in addition to the shared secret
+          # header, so a captured header alone is insufficient.
+          BODY='{"action":"sync","trigger":"github-actions"}'
+          SIG=$(printf '%s' "$BODY" | openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" | awk '{print $2}')
           HTTP_CODE=$(curl -s -o /tmp/webhook-response.txt -w "%{http_code}" \
             -X POST "https://host1.consolving.net/webhook/tuf-sync" \
             -H "X-Webhook-Secret: ${WEBHOOK_SECRET}" \
+            -H "X-Webhook-Signature: ${SIG}" \
+            -H "Content-Type: application/json" \
+            --data "$BODY" \
             --max-time 30)
           echo "Response: HTTP $HTTP_CODE"
           cat /tmp/webhook-response.txt

@@ -5,4 +5,5 @@ keys/
 staged/
 
 # Squashfs layers are served from IPFS (dl.consolving.net), not from git
+repository/targets/*.squashfs
 repository/targets/layers/
