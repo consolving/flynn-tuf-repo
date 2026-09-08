@@ -1,7 +1,7 @@
 {
 	"signed": {
 		"_type": "snapshot",
-		"expires": "2026-11-09T21:10:02Z",
+		"expires": "2026-12-07T09:21:04Z",
 		"meta": {
 			"root.json": {
 				"hashes": {
@@ -11,18 +11,18 @@
 			},
 			"targets.json": {
 				"hashes": {
-					"sha512": "6b846e351814a180851f4f2c3e06cf8ffbc6e92788ac35ac93b80c7d19e2fd688af0a8d4b503dcd81a24ec7ba80c5d7f955a3bc54d4b59935fab55aed950a622"
+					"sha512": "0f7b74d6025f6a6812bbd120cf50f69f85e385e17f581013b021290c831f05d41747270a534bd7d38d99871c311f18aed915ffe0e9eb8c8607c4884df44a5cff"
 				},
-				"length": 576773
+				"length": 867960
 			}
 		},
-		"version": 52
+		"version": 66
 	},
 	"signatures": [
 		{
 			"keyid": "b86e8929c33606b98ac5ea14f61943b131955661bb032be0228406bb9d067be8",
 			"method": "ed25519",
-			"sig": "cd2cde058d03bfa83cb6e3ffbb1c7b95679caea4bec99bbe17410e7e694bca09e595754208226151813e4841840fc9b12fa5fcdb12a3597cb358766c09ad1a07"
+			"sig": "c860fa8b3dc3157bf6d9c32052179953dfc43df616ae17fa838327411b28b29f4bf044c999d83d47511607c4094c02c1a065eb037f433e2b54ef5b5b254b8e03"
 		}
 	]
 }
