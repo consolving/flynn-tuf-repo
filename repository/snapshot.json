@@ -1,7 +1,7 @@
 {
 	"signed": {
 		"_type": "snapshot",
-		"expires": "2026-12-30T02:46:13Z",
+		"expires": "2027-01-30T02:52:25Z",
 		"meta": {
 			"root.json": {
 				"hashes": {
@@ -16,13 +16,13 @@
 				"length": 754053
 			}
 		},
-		"version": 68
+		"version": 69
 	},
 	"signatures": [
 		{
 			"keyid": "b86e8929c33606b98ac5ea14f61943b131955661bb032be0228406bb9d067be8",
 			"method": "ed25519",
-			"sig": "1651fca9cdb14a7a1e47069e11f1b5775bc012e055064ff796b7ed40ecd3a86f8334ac03da73d55ff8ad724d91e1ce742e5a6c02dfbdfce9dcfb5555a2006d00"
+			"sig": "dd0a998752593985f7b332a817d2590041e9bddd3b400b3e8f4c16f833810814757be44317b1a6945544cc111e6a0e166fe29d7aac2b079b5927a1301d962506"
 		}
 	]
 }
